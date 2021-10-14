@@ -1,0 +1,9 @@
+platform: windows
+
+inputs:
+  - name: selenium-pom-test
+outputs:
+  - name: test-project
+
+run:
+  path: Selenium-POM-TestNG-Maven/ci/tasks/run-test.bat

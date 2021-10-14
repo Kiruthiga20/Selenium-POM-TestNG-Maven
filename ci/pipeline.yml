@@ -1,0 +1,15 @@
+resources:
+- name: selenium-pom-test
+  type: git
+  source:
+    uri: https://github.com/Kiruthiga20/Selenium-POM-TestNG-Maven.git
+    artifact: FreeCRMautomation:FressCRMAutomation:0.0.1-SNAPSHOT
+
+
+jobs:
+- name: run-tests
+  plan:
+  - get: selenium-pom-test
+    trigger: true
+  - task: run-unit-tests
+    file: ./test.yaml
